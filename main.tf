@@ -202,8 +202,7 @@ resource "null_resource" "configure-cat-app" {
   }
 }
 
-module "backupstorage" {
-  source   = "adfinis-sygroup/backupstorage/azurerm"
-  version  = "0.1.1"
-  location = azurerm_resource_group.myresourcegroup.location
+module "azure-backup" {
+  source  = "ravensorb/azure-backup/azurerm"
+  version = "1.0.2"
 }
